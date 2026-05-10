@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#0B3C5D">
+<title>Gallery – Prakash Model School, Pilibanga</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<link rel="stylesheet" href="style.css">
+<script src="main.js" defer></script>
+
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav id="navbar">
+  <div class="nav-inner">
+    <div class="nav-logo">
+      <div class="nav-logo-icon"><i class="fas fa-graduation-cap"></i></div>
+      <div class="nav-logo-text">
+        <h2>Prakash Model School</h2>
+        <span>Pilibanga, Rajasthan</span>
+      </div>
+    </div>
+    <a href="index.html" class="nav-back"><i class="fas fa-arrow-left"></i> <span>Back to Home</span></a>
+  </div>
+</nav>
+
+<!-- HERO BANNER -->
+<section id="gallery-hero">
+  <div class="gallery-hero-bg"><span></span><span></span><span></span></div>
+  <div class="gallery-hero-content">
+    <div class="gallery-hero-badge"><i class="fas fa-camera"></i> School Gallery 2024–25</div>
+    <h1>Moments of <span>Pride &amp; Joy</span></h1>
+    <p>A visual journey through the events, achievements, and everyday brilliance that define life at Prakash Model School.</p>
+    <div class="gallery-meta-row">
+      <div class="g-meta"><i class="fas fa-image"></i> Up to 25 Photos</div>
+      <div class="g-meta"><i class="fas fa-video"></i> 5 Videos</div>
+      <div class="g-meta"><i class="fas fa-mobile-alt"></i> Mobile Friendly</div>
+      <div class="g-meta"><i class="fas fa-bolt"></i> Fast Loading</div>
+    </div>
+  </div>
+</section>
+
+<!-- FILTER BAR -->
+<div id="filter-bar">
+  <div class="filter-inner">
+    <button class="filter-btn active" data-filter="all" onclick="filterGallery('all',this)">
+      <i class="fas fa-th"></i> All <span class="filter-count" id="fc-all">0</span>
+    </button>
+    <button class="filter-btn" data-filter="photos" onclick="filterGallery('photos',this)">
+      <i class="fas fa-image"></i> Photos <span class="filter-count" id="fc-photos">0</span>
+    </button>
+    <button class="filter-btn" data-filter="videos" onclick="filterGallery('videos',this)">
+      <i class="fas fa-video"></i> Videos <span class="filter-count" id="fc-videos">0</span>
+    </button>
+  </div>
+</div>
+
+<!-- MAIN GALLERY -->
+<main id="gallery-main">
+
+  <!-- PHOTOS -->
+  <section id="photos-section">
+    <div class="section-heading">
+      <div class="section-heading-line"></div>
+      <h2><i class="fas fa-image"></i> Photo Gallery</h2>
+      <div class="section-heading-line"></div>
+    </div>
+
+    <div class="photo-grid" id="photo-grid">
+      <!--
+        HOW TO ADD PHOTOS:
+        Each .photo-slot below starts hidden (display:none).
+        Set the data-src attribute to a real image URL.
+        The JavaScript will detect it, lazy-load it, and show the slot.
+        Leave data-src="" to keep the slot hidden.
+
+        To add a photo:   data-src="your-image-url.jpg"
+        To remove photo:  data-src=""  (slot stays hidden automatically)
+
+        data-label = Caption shown on hover
+        data-category = Optional tag shown in caption (e.g. "Annual Day")
+      -->
+
+      <div class="photo-slot" data-src="" data-label="Annual Day 2024" data-category="Event"></div>
+      <div class="photo-slot" data-src="" data-label="Science Exhibition" data-category="Academic"></div>
+      <div class="photo-slot" data-src="" data-label="Sports Day – Sprint Race" data-category="Sports"></div>
+      <div class="photo-slot" data-src="" data-label="Cultural Night Performance" data-category="Cultural"></div>
+      <div class="photo-slot" data-src="" data-label="Prize Distribution Ceremony" data-category="Event"></div>
+      <div class="photo-slot" data-src="" data-label="Republic Day Parade" data-category="Event"></div>
+      <div class="photo-slot" data-src="" data-label="Art & Craft Exhibition" data-category="Cultural"></div>
+      <div class="photo-slot" data-src="" data-label="Football Tournament Finals" data-category="Sports"></div>
+      <div class="photo-slot" data-src="" data-label="Classroom Activity – Class 6" data-category="Academic"></div>
+      <div class="photo-slot" data-src="" data-label="Tree Plantation Drive" data-category="Event"></div>
+      <div class="photo-slot" data-src="" data-label="Independence Day Flag Hoisting" data-category="Event"></div>
+      <div class="photo-slot" data-src="" data-label="Library Reading Session" data-category="Academic"></div>
+      <div class="photo-slot" data-src="" data-label="Computer Lab – Digital Literacy" data-category="Academic"></div>
+      <div class="photo-slot" data-src="" data-label="Agriculture Field Visit" data-category="Academic"></div>
+      <div class="photo-slot" data-src="" data-label="Morning Assembly" data-category="School Life"></div>
+      <div class="photo-slot" data-src="" data-label="Basketball Match" data-category="Sports"></div>
+      <div class="photo-slot" data-src="" data-label="Dance Performance – Navratri" data-category="Cultural"></div>
+      <div class="photo-slot" data-src="" data-label="Class 10 Board Toppers" data-category="Achievement"></div>
+      <div class="photo-slot" data-src="" data-label="School Campus – Main Gate" data-category="Campus"></div>
+      <div class="photo-slot" data-src="" data-label="Yoga Day Celebration" data-category="Event"></div>
+      <div class="photo-slot" data-src="" data-label="Teacher's Day Special" data-category="Event"></div>
+      <div class="photo-slot" data-src="" data-label="Drawing Competition" data-category="Cultural"></div>
+      <div class="photo-slot" data-src="" data-label="Parent-Teacher Meeting" data-category="School Life"></div>
+      <div class="photo-slot" data-src="" data-label="Farewell – Class 12 Batch" data-category="Event"></div>
+      <div class="photo-slot" data-src="" data-label="New Classroom Block Inauguration" data-category="Campus"></div>
+    </div>
+
+    <div id="photos-empty">
+      <i class="fas fa-image"></i>
+      <p>No photos available yet. Add image URLs to the photo slots to display them here.</p>
+    </div>
+  </section>
+
+  <!-- VIDEOS -->
+  <section id="videos-section">
+    <div class="section-heading">
+      <div class="section-heading-line"></div>
+      <h2><i class="fas fa-video"></i> Video Gallery</h2>
+      <div class="section-heading-line"></div>
+    </div>
+
+    <div class="video-grid" id="video-grid">
+      <!--
+        HOW TO ADD VIDEOS:
+        Set data-src to a video file URL (.mp4, .webm, etc.).
+        Set data-title for the video label shown below.
+        Set data-duration for the duration text (e.g. "3:42").
+        Leave data-src="" to keep the slot hidden automatically.
+
+        Videos do NOT autoplay. User must tap/click the placeholder to load & play.
+        The download button is suppressed via controlslist attribute.
+      -->
+
+      <div class="video-slot" data-src="" data-title="Annual Day 2024 – Full Program" data-duration="28:14"></div>
+      <div class="video-slot" data-src="" data-title="Sports Day Highlights" data-duration="6:30"></div>
+      <div class="video-slot" data-src="" data-title="Cultural Night – Dance Medley" data-duration="12:05"></div>
+      <div class="video-slot" data-src="" data-title="Principal's Address – New Session" data-duration="4:48"></div>
+      <div class="video-slot" data-src="" data-title="Campus Tour – Prakash Model School" data-duration="5:20"></div>
+    </div>
+
+    <div id="videos-empty">
+      <i class="fas fa-video"></i>
+      <p>No videos available yet. Add video URLs to the video slots to display them here.</p>
+    </div>
+  </section>
+
+</main>
+
+<!-- LIGHTBOX -->
+<div id="lightbox" role="dialog" aria-modal="true">
+  <button class="lb-close" onclick="closeLightbox()" aria-label="Close"><i class="fas fa-times"></i></button>
+  <button class="lb-prev" onclick="lbNav(-1)" aria-label="Previous"><i class="fas fa-chevron-left"></i></button>
+  <div class="lb-inner">
+    <img id="lb-img" src="" alt="">
+  </div>
+  <button class="lb-next" onclick="lbNav(1)" aria-label="Next"><i class="fas fa-chevron-right"></i></button>
+  <div class="lb-caption" id="lb-caption"></div>
+</div>
+
+<!-- BACK TO TOP -->
+<button id="btt" onclick="window.scrollTo({top:0,behavior:'smooth'})" aria-label="Back to top">
+  <i class="fas fa-arrow-up"></i>
+</button>
+
+
+<!-- ADMISSION MODAL -->
+<div id="adm-modal-overlay">
+  <div id="adm-modal">
+    <div id="adm-modal-header">
+      <button id="adm-modal-close" onclick="closeAdmissionModal()"><i class="fas fa-times"></i></button>
+      <h3><i class="fas fa-graduation-cap" style="margin-right:8px;color:#F5A623"></i>Admission Enquiry 2025-26</h3>
+      <p>Fill in the details - we will contact you shortly.</p>
+    </div>
+    <div id="adm-modal-body">
+      <div id="adm-modal-success">
+        <i class="fas fa-check-circle"></i>
+        <h3 style="color:#276749;margin-bottom:8px">Thank You!</h3>
+        <p style="color:#555;font-size:.88rem">We have received your enquiry. Our team will contact you on WhatsApp or phone shortly.</p>
+        <button onclick="closeAdmissionModal()" style="margin-top:16px;background:#0B3C5D;color:#fff;border:none;border-radius:8px;padding:10px 28px;font-weight:600;cursor:pointer;font-family:inherit">Close</button>
+      </div>
+      <div id="adm-modal-form">
+        <div class="adm-field">
+          <label>Parent Name <span style="color:#e53e3e">*</span></label>
+          <input id="m-parent" type="text" placeholder="Enter Parent Name">
+        </div>
+        <div class="adm-field">
+          <label>Parent Email Address <span style="color:#e53e3e">*</span></label>
+          <input id="m-email" type="email" placeholder="Enter Parent Email Address">
+        </div>
+        <div class="adm-field">
+          <label>Parent Mobile Number <span style="color:#e53e3e">*</span></label>
+          <div class="adm-phone-row">
+            <select id="m-country"><option value="+91">+91 India</option><option value="+1">+1</option><option value="+44">+44</option><option value="+971">+971</option></select>
+            <input id="m-phone" type="tel" placeholder="Enter Mobile Number">
+          </div>
+        </div>
+        <div class="adm-field">
+          <label>Student Name <span style="color:#e53e3e">*</span></label>
+          <input id="m-student" type="text" placeholder="Enter Student Name">
+        </div>
+        <div class="adm-field">
+          <label>Admission Sought in Class <span style="color:#e53e3e">*</span></label>
+          <select id="m-class" onchange="handleModalClassChange(this.value)">
+            <option value="">- Select Class -</option>
+            <option>Pre-Nursery / Nursery</option><option>LKG</option><option>UKG</option>
+            <option>Class 1</option><option>Class 2</option><option>Class 3</option>
+            <option>Class 4</option><option>Class 5</option><option>Class 6</option>
+            <option>Class 7</option><option>Class 8</option><option>Class 9</option>
+            <option>Class 10</option><option value="Class 11">Class 11</option><option value="Class 12">Class 12</option>
+          </select>
+        </div>
+        <div class="adm-field" id="m-stream-box" style="display:none">
+          <label>Stream <span style="color:#e53e3e">*</span></label>
+          <select id="m-stream">
+            <option value="">- Select Stream -</option>
+            <option>Science - Medical (PCB)</option>
+            <option>Science - Non-Medical (PCM)</option>
+            <option>Arts</option><option>Commerce</option><option>Agriculture</option>
+          </select>
+        </div>
+        <div style="display:flex;align-items:flex-start;gap:10px;margin-bottom:16px;margin-top:4px">
+          <input id="m-consent" type="checkbox" style="width:16px;height:16px;margin-top:2px;flex-shrink:0">
+          <label for="m-consent" style="font-size:.78rem;color:#555;cursor:pointer">I agree to receive updates through SMS/Email and WhatsApp</label>
+        </div>
+        <button class="adm-submit" onclick="submitModalAdmission()">
+          <i class="fas fa-paper-plane"></i> Submit Enquiry
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+</body>
+</html>

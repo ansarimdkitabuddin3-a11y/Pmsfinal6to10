@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#0B3C5D">
+<title>Events & Programs – Prakash Model School</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<link rel="stylesheet" href="style.css">
+<script src="main.js" defer></script>
+
+</head>
+<body>
+
+<div id="scroll-progress"></div>
+
+<!-- NAVBAR -->
+<nav id="navbar">
+  <div class="nav-inner">
+    <div class="nav-logo-text">
+      <h2>Prakash Model School</h2>
+      <span>Pilibanga, Rajasthan</span>
+    </div>
+    <a href="#" class="nav-back"><i class="fas fa-arrow-left"></i> Back to Achievements</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="page-hero">
+  <div class="p1"></div><div class="p2"></div><div class="p3"></div>
+  <div class="hero-inner">
+    <div class="hero-badge"><i class="fas fa-calendar-star"></i> SCHOOL EVENTS</div>
+    <h1>Events &amp; <span>Programs</span></h1>
+    <div class="hero-quote">
+      <p>"Every event is a stage, every student a star — together we create memories that last a lifetime."</p>
+      <cite>— Prakash Model School</cite>
+    </div>
+  </div>
+</section>
+
+<!-- PHOTO SLIDER SECTION -->
+<div class="section-wrap">
+  <div class="section-heading">
+    <div class="sh-icon gold"><i class="fas fa-images"></i></div>
+    <h2>Event Highlights <span>Moments from our celebrations &amp; programs</span></h2>
+    <div class="sh-line"></div>
+  </div>
+
+  <div class="slider-outer">
+    <div class="slider-track" id="sliderTrack"></div>
+  </div>
+
+  <div class="slider-dots" id="sliderDots"></div>
+
+  <div class="slider-arrows">
+    <button class="arr-btn" id="prevBtn" aria-label="Previous"><i class="fas fa-chevron-left"></i></button>
+    <button class="arr-btn" id="nextBtn" aria-label="Next"><i class="fas fa-chevron-right"></i></button>
+  </div>
+</div>
+
+<!-- LIGHTBOX -->
+<div id="lightbox">
+  <button class="lb-close" onclick="closeLightbox()"><i class="fas fa-times"></i></button>
+  <button class="lb-nav" id="lb-prev" onclick="lbNav(-1)"><i class="fas fa-chevron-left"></i></button>
+  <button class="lb-nav" id="lb-next" onclick="lbNav(1)"><i class="fas fa-chevron-right"></i></button>
+  <div class="lb-inner">
+    <div class="lb-media-wrap" id="lb-media-wrap"></div>
+  </div>
+  <div class="lb-counter" id="lb-counter"></div>
+</div>
+
+<footer class="page-footer">
+  &copy; 2025 Prakash Model School, Pilibanga, Rajasthan &nbsp;|&nbsp; All Rights Reserved
+</footer>
+
+
+<!-- ADMISSION MODAL -->
+<div id="adm-modal-overlay">
+  <div id="adm-modal">
+    <div id="adm-modal-header">
+      <button id="adm-modal-close" onclick="closeAdmissionModal()"><i class="fas fa-times"></i></button>
+      <h3><i class="fas fa-graduation-cap" style="margin-right:8px;color:#F5A623"></i>Admission Enquiry 2025-26</h3>
+      <p>Fill in the details - we will contact you shortly.</p>
+    </div>
+    <div id="adm-modal-body">
+      <div id="adm-modal-success">
+        <i class="fas fa-check-circle"></i>
+        <h3 style="color:#276749;margin-bottom:8px">Thank You!</h3>
+        <p style="color:#555;font-size:.88rem">We have received your enquiry. Our team will contact you on WhatsApp or phone shortly.</p>
+        <button onclick="closeAdmissionModal()" style="margin-top:16px;background:#0B3C5D;color:#fff;border:none;border-radius:8px;padding:10px 28px;font-weight:600;cursor:pointer;font-family:inherit">Close</button>
+      </div>
+      <div id="adm-modal-form">
+        <div class="adm-field">
+          <label>Parent Name <span style="color:#e53e3e">*</span></label>
+          <input id="m-parent" type="text" placeholder="Enter Parent Name">
+        </div>
+        <div class="adm-field">
+          <label>Parent Email Address <span style="color:#e53e3e">*</span></label>
+          <input id="m-email" type="email" placeholder="Enter Parent Email Address">
+        </div>
+        <div class="adm-field">
+          <label>Parent Mobile Number <span style="color:#e53e3e">*</span></label>
+          <div class="adm-phone-row">
+            <select id="m-country"><option value="+91">+91 India</option><option value="+1">+1</option><option value="+44">+44</option><option value="+971">+971</option></select>
+            <input id="m-phone" type="tel" placeholder="Enter Mobile Number">
+          </div>
+        </div>
+        <div class="adm-field">
+          <label>Student Name <span style="color:#e53e3e">*</span></label>
+          <input id="m-student" type="text" placeholder="Enter Student Name">
+        </div>
+        <div class="adm-field">
+          <label>Admission Sought in Class <span style="color:#e53e3e">*</span></label>
+          <select id="m-class" onchange="handleModalClassChange(this.value)">
+            <option value="">- Select Class -</option>
+            <option>Pre-Nursery / Nursery</option><option>LKG</option><option>UKG</option>
+            <option>Class 1</option><option>Class 2</option><option>Class 3</option>
+            <option>Class 4</option><option>Class 5</option><option>Class 6</option>
+            <option>Class 7</option><option>Class 8</option><option>Class 9</option>
+            <option>Class 10</option><option value="Class 11">Class 11</option><option value="Class 12">Class 12</option>
+          </select>
+        </div>
+        <div class="adm-field" id="m-stream-box" style="display:none">
+          <label>Stream <span style="color:#e53e3e">*</span></label>
+          <select id="m-stream">
+            <option value="">- Select Stream -</option>
+            <option>Science - Medical (PCB)</option>
+            <option>Science - Non-Medical (PCM)</option>
+            <option>Arts</option><option>Commerce</option><option>Agriculture</option>
+          </select>
+        </div>
+        <div style="display:flex;align-items:flex-start;gap:10px;margin-bottom:16px;margin-top:4px">
+          <input id="m-consent" type="checkbox" style="width:16px;height:16px;margin-top:2px;flex-shrink:0">
+          <label for="m-consent" style="font-size:.78rem;color:#555;cursor:pointer">I agree to receive updates through SMS/Email and WhatsApp</label>
+        </div>
+        <button class="adm-submit" onclick="submitModalAdmission()">
+          <i class="fas fa-paper-plane"></i> Submit Enquiry
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<script>
+var EVENTS = [
+  { src: "images/sports-day.jpg",   cap: "🏅 Annual Sports Day",          type: "image" },
+  { src: "images/cultural.jpg",     cap: "🎭 Cultural Festival",           type: "image" },
+  { src: "images/prize.jpg",        cap: "🎓 Prize Distribution Ceremony", type: "image" },
+  { src: "images/republic-day.jpg", cap: "🇮🇳 Republic Day Parade",        type: "image" },
+  { src: "images/science.jpg",      cap: "🔬 Science Exhibition",          type: "image" },
+  { src: "images/debate.jpg",       cap: "🎤 Inter-School Debate",         type: "image" },
+  { src: "images/farewell.jpg",     cap: "⭐ Senior Farewell Night",       type: "image" }
+  /* ── To add a video:
+     { src: "images/event.mp4", cap: "🎬 Event Name", type: "video" },
+  ── To add more images keep adding lines. ── */
+];
+initSlider(EVENTS);
+</script>
+</body>
+</html>

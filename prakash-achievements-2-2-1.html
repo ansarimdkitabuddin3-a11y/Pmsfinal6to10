@@ -1,0 +1,638 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#0B3C5D">
+<title>Achievements – Prakash Model School, Pilibanga</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<link rel="stylesheet" href="style.css">
+<script src="main.js" defer></script>
+
+</head>
+<body>
+<div id="scroll-progress"></div>
+
+<!-- NAVBAR -->
+<nav id="navbar">
+  <div class="nav-inner">
+    <div class="nav-logo">
+      <div class="nav-logo-text">
+        <h2>Prakash Model School</h2>
+        <span>Pilibanga, Rajasthan</span>
+      </div>
+    </div>
+    <a href="index.html" class="nav-back"><i class="fas fa-arrow-left"></i> Back to Main Site</a>
+  </div>
+</nav>
+
+<!-- HERO BANNER -->
+<section class="ach-hero">
+  <div class="ach-hero-particle"></div>
+  <div class="ach-hero-particle"></div>
+  <div class="ach-hero-inner">
+    <div class="ach-badge"><i class="fas fa-trophy"></i> Our Pride & Glory</div>
+    <h1>School <span>Achievements</span></h1>
+    <p>Celebrating excellence in academics, sports, community service, and beyond. Every achievement reflects our commitment to building future leaders.</p>
+  </div>
+  <div class="ach-stats">
+    <div class="ach-stat"><div class="num">90%+</div><div class="lbl">Board Pass Rate</div></div>
+    <div class="ach-stat"><div class="num">50+</div><div class="lbl">Sports Medals</div></div>
+    <div class="ach-stat"><div class="num">30+</div><div class="lbl">Scholarships</div></div>
+    <div class="ach-stat"><div class="num">100+</div><div class="lbl">Community Events</div></div>
+  </div>
+</section>
+
+<!-- FILTER TABS -->
+<div class="filter-wrap">
+  <div class="filter-inner">
+    <button class="filter-btn active" data-tab="results" onclick="switchTab('results',this)">
+      <i class="fas fa-chart-line"></i><span>Results</span>
+    </button>
+    <button class="filter-btn" data-tab="sports" onclick="switchTab('sports',this)">
+      <i class="fas fa-trophy"></i><span>Sports</span>
+    </button>
+    <button class="filter-btn" data-tab="news" onclick="switchTab('news',this)">
+      <i class="fas fa-newspaper"></i><span>News</span>
+    </button>
+    <button class="filter-btn" data-tab="scholarships" onclick="switchTab('scholarships',this)">
+      <i class="fas fa-graduation-cap"></i><span>Scholarships</span>
+    </button>
+    <button class="filter-btn" data-tab="events" onclick="switchTab('events',this)">
+      <i class="fas fa-calendar-alt"></i><span>Events</span>
+    </button>
+    <button class="filter-btn" data-tab="community" onclick="switchTab('community',this)">
+      <i class="fas fa-heart"></i><span>Community</span>
+    </button>
+  </div>
+</div>
+
+<!-- CONTENT -->
+<div class="ach-content">
+
+  <!-- ===== RESULTS TAB ===== -->
+  <div class="tab-panel active" id="tab-results">
+    <div class="panel-header reveal">
+      <div class="panel-label"><i class="fas fa-chart-bar"></i> Academic Excellence</div>
+      <h2 class="panel-title">Board <span>Results</span></h2>
+      <div class="divider"></div>
+      <p class="panel-sub">Our students consistently achieve outstanding results in RBSE board examinations across all streams.</p>
+    </div>
+    <div class="results-grid stagger">
+      <div class="result-card gold">
+        <div class="result-icon"><i class="fas fa-star"></i></div>
+        <h3>Class 12 – Commerce</h3>
+        <div class="year">2024–25 Board Result</div>
+        <p>Outstanding performance with top scorers achieving above 90%</p>
+        <div class="result-percent">92% <span>pass rate</span></div>
+      </div>
+      <div class="result-card mint">
+        <div class="result-icon"><i class="fas fa-flask"></i></div>
+        <h3>Class 12 – Science</h3>
+        <div class="year">2024–25 Board Result</div>
+        <p>Exceptional results in PCM & PCB with multiple distinctions</p>
+        <div class="result-percent">89% <span>pass rate</span></div>
+      </div>
+      <div class="result-card blue">
+        <div class="result-icon"><i class="fas fa-book"></i></div>
+        <h3>Class 12 – Arts</h3>
+        <div class="year">2024–25 Board Result</div>
+        <p>Strong performance across all humanities subjects</p>
+        <div class="result-percent">94% <span>pass rate</span></div>
+      </div>
+      <div class="result-card gold">
+        <div class="result-icon"><i class="fas fa-seedling"></i></div>
+        <h3>Class 12 – Agriculture</h3>
+        <div class="year">2024–25 Board Result</div>
+        <p>Excellent results in one of Rajasthan's best agriculture programs</p>
+        <div class="result-percent">91% <span>pass rate</span></div>
+      </div>
+      <div class="result-card mint">
+        <div class="result-icon"><i class="fas fa-award"></i></div>
+        <h3>Class 10 – All Streams</h3>
+        <div class="year">2024–25 Board Result</div>
+        <p>Remarkable pass rate with top students in district rankings</p>
+        <div class="result-percent">95% <span>pass rate</span></div>
+      </div>
+      <div class="result-card blue">
+        <div class="result-icon"><i class="fas fa-medal"></i></div>
+        <h3>District Toppers</h3>
+        <div class="year">Consecutive Years</div>
+        <p>Students from PMS rank in top positions at district level consistently</p>
+        <div class="result-percent">5+ <span>district toppers</span></div>
+      </div>
+    </div>
+
+    <!-- Toppers List -->
+    <div class="topper-list reveal">
+      <div class="topper-list-header">
+        <i class="fas fa-crown"></i>
+        <h3>Class 12 Toppers 2024–25 (Placeholder – Update with Real Names)</h3>
+      </div>
+      <div class="topper-row">
+        <div class="rank r1">1</div>
+        <div class="topper-info"><h4>Student Name</h4><p>Commerce Stream</p></div>
+        <div class="topper-score">95.4%</div>
+      </div>
+      <div class="topper-row">
+        <div class="rank r2">2</div>
+        <div class="topper-info"><h4>Student Name</h4><p>Science – PCM</p></div>
+        <div class="topper-score">94.8%</div>
+      </div>
+      <div class="topper-row">
+        <div class="rank r3">3</div>
+        <div class="topper-info"><h4>Student Name</h4><p>Arts Stream</p></div>
+        <div class="topper-score">93.6%</div>
+      </div>
+      <div class="topper-row">
+        <div class="rank rn">4</div>
+        <div class="topper-info"><h4>Student Name</h4><p>Science – PCB</p></div>
+        <div class="topper-score">92.9%</div>
+      </div>
+      <div class="topper-row">
+        <div class="rank rn">5</div>
+        <div class="topper-info"><h4>Student Name</h4><p>Agriculture Stream</p></div>
+        <div class="topper-score">91.7%</div>
+      </div>
+    </div>
+
+    <div class="proof-btn-wrap reveal">
+      <a href="results-1-1.html" class="proof-btn">
+        <i class="fas fa-file-alt"></i> Proof – View Full Results
+      </a>
+    </div>
+  </div>
+
+  <!-- ===== SPORTS TAB ===== -->
+  <div class="tab-panel" id="tab-sports">
+    <div class="panel-header reveal">
+      <div class="panel-label"><i class="fas fa-running"></i> Athletic Excellence</div>
+      <h2 class="panel-title">Sports <span>Achievements</span></h2>
+      <div class="divider"></div>
+      <p class="panel-sub">Our athletes represent the school with pride at district, state, and national levels.</p>
+    </div>
+
+    <div class="sports-trophy reveal">
+      <i class="fas fa-trophy"></i>
+      <h3>50+ Medals & Trophies Won</h3>
+      <p>At District, State & National Level Competitions | 2020–2025</p>
+    </div>
+
+    <div class="sports-grid stagger">
+      <div class="sport-card">
+        <span class="sport-icon-wrap">🏏</span>
+        <span class="sport-name">Cricket</span>
+        <span class="sport-level">District Level</span>
+      </div>
+      <div class="sport-card">
+        <span class="sport-icon-wrap">⚽</span>
+        <span class="sport-name">Football</span>
+        <span class="sport-level">State Level</span>
+      </div>
+      <div class="sport-card">
+        <span class="sport-icon-wrap">🏀</span>
+        <span class="sport-name">Basketball</span>
+        <span class="sport-level">District Level</span>
+      </div>
+      <div class="sport-card">
+        <span class="sport-icon-wrap">🏃</span>
+        <span class="sport-name">Athletics</span>
+        <span class="sport-level">State Level</span>
+      </div>
+      <div class="sport-card">
+        <span class="sport-icon-wrap">🤸</span>
+        <span class="sport-name">Gymnastics</span>
+        <span class="sport-level">District Level</span>
+      </div>
+      <div class="sport-card">
+        <span class="sport-icon-wrap">🏐</span>
+        <span class="sport-name">Volleyball</span>
+        <span class="sport-level">District Level</span>
+      </div>
+      <div class="sport-card">
+        <span class="sport-icon-wrap">🎾</span>
+        <span class="sport-name">Badminton</span>
+        <span class="sport-level">State Level</span>
+      </div>
+      <div class="sport-card">
+        <span class="sport-icon-wrap">🥋</span>
+        <span class="sport-name">Kabaddi</span>
+        <span class="sport-level">State Level</span>
+      </div>
+    </div>
+
+    <div class="achievement-list stagger">
+      <div class="ach-item">
+        <div class="medal"><i class="fas fa-medal"></i></div>
+        <div><h4>District Cricket Championship – Winners</h4><p>School cricket team won the Hanumangarh District Championship, defeating 12 teams.</p></div>
+      </div>
+      <div class="ach-item">
+        <div class="medal"><i class="fas fa-award"></i></div>
+        <div><h4>State Athletics – 3 Gold Medals</h4><p>Our athletes won gold in 100m, 400m relay, and long jump at the Rajasthan State School Games.</p></div>
+      </div>
+      <div class="ach-item">
+        <div class="medal"><i class="fas fa-star"></i></div>
+        <div><h4>Football – District Runners-Up</h4><p>School football team reached the district finals and secured the runners-up position.</p></div>
+      </div>
+      <div class="ach-item">
+        <div class="medal"><i class="fas fa-trophy"></i></div>
+        <div><h4>Kabaddi – State Level Participation</h4><p>Selected students represented Hanumangarh district at the state-level kabaddi championship.</p></div>
+      </div>
+    </div>
+
+    <div class="proof-btn-wrap reveal">
+      <a href="sports-3.html" class="proof-btn">
+        <i class="fas fa-medal"></i> Proof – View Sports Achievements
+      </a>
+    </div>
+  </div>
+
+  <!-- ===== NEWS TAB ===== -->
+  <div class="tab-panel" id="tab-news">
+    <div class="panel-header reveal">
+      <div class="panel-label"><i class="fas fa-newspaper"></i> Media Coverage</div>
+      <h2 class="panel-title">School in the <span>News</span></h2>
+      <div class="divider"></div>
+      <p class="panel-sub">Prakash Model School regularly features in local and regional newspapers for its achievements and initiatives.</p>
+    </div>
+    <div class="news-grid stagger">
+      <div class="news-card">
+        <div class="news-img-placeholder style1">
+          <i class="fas fa-newspaper"></i>
+          <div class="news-date-tag">Mar 2025</div>
+        </div>
+        <div class="news-body">
+          <div class="news-category">Academic</div>
+          <h3>Prakash Model School Students Excel in RBSE Board Exams</h3>
+          <p>School records highest ever pass percentage with multiple district toppers in Class 12 board exams this year.</p>
+          <div class="news-source"><i class="fas fa-book-open"></i> Dainik Bhaskar, Hanumangarh</div>
+        </div>
+      </div>
+      <div class="news-card">
+        <div class="news-img-placeholder style2">
+          <i class="fas fa-running"></i>
+          <div class="news-date-tag">Jan 2025</div>
+        </div>
+        <div class="news-body">
+          <div class="news-category">Sports</div>
+          <h3>PMS Athletes Win Gold at Rajasthan State School Games</h3>
+          <p>Three students from Prakash Model School won gold medals in athletics events at the state school sports competition.</p>
+          <div class="news-source"><i class="fas fa-book-open"></i> Rajasthan Patrika, Pilibanga</div>
+        </div>
+      </div>
+      <div class="news-card">
+        <div class="news-img-placeholder style3">
+          <i class="fas fa-seedling"></i>
+          <div class="news-date-tag">Nov 2024</div>
+        </div>
+        <div class="news-body">
+          <div class="news-category">Community</div>
+          <h3>School Launches Tree Plantation Drive in Pilibanga</h3>
+          <p>Over 500 saplings planted by students across the town in an environmental awareness campaign led by the school.</p>
+          <div class="news-source"><i class="fas fa-book-open"></i> Local Daily, Pilibanga</div>
+        </div>
+      </div>
+      <div class="news-card">
+        <div class="news-img-placeholder style4">
+          <i class="fas fa-graduation-cap"></i>
+          <div class="news-date-tag">Sep 2024</div>
+        </div>
+        <div class="news-body">
+          <div class="news-category">Scholarship</div>
+          <h3>Merit Scholarship Felicitation Ceremony Held at PMS</h3>
+          <p>30+ deserving students received merit scholarships in a grand ceremony attended by educational authorities.</p>
+          <div class="news-source"><i class="fas fa-book-open"></i> Amar Ujala, Hanumangarh</div>
+        </div>
+      </div>
+      <div class="news-card">
+        <div class="news-img-placeholder style5">
+          <i class="fas fa-star"></i>
+          <div class="news-date-tag">Aug 2024</div>
+        </div>
+        <div class="news-body">
+          <div class="news-category">Cultural</div>
+          <h3>Grand Annual Day Celebrates Student Talent at PMS</h3>
+          <p>The annual cultural festival showcased extraordinary talent in dance, drama, music, and fine arts by Prakash Model School students.</p>
+          <div class="news-source"><i class="fas fa-book-open"></i> Rajasthan Patrika</div>
+        </div>
+      </div>
+      <div class="news-card">
+        <div class="news-img-placeholder style6">
+          <i class="fas fa-trophy"></i>
+          <div class="news-date-tag">Jul 2024</div>
+        </div>
+        <div class="news-body">
+          <div class="news-category">Sports</div>
+          <h3>Cricket Team Wins District Championship Title</h3>
+          <p>Prakash Model School's cricket team lifts the Hanumangarh District Schools Cricket Trophy for the second consecutive year.</p>
+          <div class="news-source"><i class="fas fa-book-open"></i> Dainik Bhaskar</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="proof-btn-wrap reveal">
+      <a href="newspaper-1.html" class="proof-btn">
+        <i class="fas fa-newspaper"></i> Proof – View Newspaper Articles
+      </a>
+    </div>
+  </div>
+
+  <!-- ===== SCHOLARSHIPS TAB ===== -->
+  <div class="tab-panel" id="tab-scholarships">
+    <div class="panel-header reveal">
+      <div class="panel-label"><i class="fas fa-graduation-cap"></i> Financial Support</div>
+      <h2 class="panel-title">Scholarships & <span>Merit Awards</span></h2>
+      <div class="divider"></div>
+      <p class="panel-sub">We believe every deserving student should have access to quality education regardless of financial background.</p>
+    </div>
+    <div class="schol-grid stagger">
+      <div class="schol-card">
+        <div class="schol-icon"><i class="fas fa-star"></i></div>
+        <h3>Merit Scholarship</h3>
+        <p>Awarded to students scoring 90%+ in board examinations. Covers a significant portion of tuition fees for the next academic year.</p>
+        <span class="schol-amount">Up to ₹10,000 / Year</span>
+      </div>
+      <div class="schol-card">
+        <div class="schol-icon"><i class="fas fa-hand-holding-heart"></i></div>
+        <h3>Need-Based Scholarship</h3>
+        <p>Supporting economically weaker section students with full or partial fee waivers to ensure no child misses out on education.</p>
+        <span class="schol-amount">Up to 100% Fee Waiver</span>
+      </div>
+      <div class="schol-card">
+        <div class="schol-icon"><i class="fas fa-running"></i></div>
+        <h3>Sports Excellence Award</h3>
+        <p>Students representing school at district or state level in sports receive fee concessions and special recognition at annual day.</p>
+        <span class="schol-amount">Up to ₹5,000 / Year</span>
+      </div>
+      <div class="schol-card">
+        <div class="schol-icon"><i class="fas fa-book-reader"></i></div>
+        <h3>Government Scholarship</h3>
+        <p>School actively assists students in applying for state and central government scholarships including SC/ST and OBC schemes.</p>
+        <span class="schol-amount">As per Govt. Norms</span>
+      </div>
+    </div>
+
+    <div class="community-banner reveal">
+      <i class="fas fa-hands-helping"></i>
+      <div>
+        <h3>30+ Students Awarded Scholarships in 2024–25</h3>
+        <p>This year we supported over 30 students through various scholarship programs, investing in their bright futures and ensuring quality education remains accessible to all.</p>
+      </div>
+    </div>
+
+    <div class="achievement-list stagger">
+      <div class="ach-item">
+        <div class="medal"><i class="fas fa-award"></i></div>
+        <div><h4>RBSE Merit Award Recipients – Class 12 (2024)</h4><p>5 students from Prakash Model School received the RBSE Board merit awards for exceptional academic performance.</p></div>
+      </div>
+      <div class="ach-item">
+        <div class="medal"><i class="fas fa-certificate"></i></div>
+        <div><h4>National Means-cum-Merit Scholarship (NMMS)</h4><p>Multiple Class 8 students qualified and received the prestigious NMMS scholarship from the Ministry of Education.</p></div>
+      </div>
+      <div class="ach-item">
+        <div class="medal"><i class="fas fa-star\"></i></div>
+        <div><h4>Rajasthan State Scholarship Scheme Recipients</h4><p>SC/ST/OBC students supported under the state scholarship scheme with full fee reimbursement from the government.</p></div>
+      </div>
+    </div>
+
+    <div class="proof-btn-wrap reveal">
+      <a href="scholarship-1-1.html" class="proof-btn">
+        <i class="fas fa-graduation-cap"></i> Proof – View Scholarships
+      </a>
+    </div>
+  </div>
+
+  <!-- ===== EVENTS TAB ===== -->
+  <div class="tab-panel" id="tab-events">
+    <div class="panel-header reveal">
+      <div class="panel-label"><i class="fas fa-calendar-check"></i> School Calendar</div>
+      <h2 class="panel-title">Events & <span>Celebrations</span></h2>
+      <div class="divider"></div>
+      <p class="panel-sub">A vibrant calendar of academic, cultural, and sports events that enrich student life at Prakash Model School.</p>
+    </div>
+    <div class="events-list stagger">
+      <div class="event-card">
+        <div class="event-date-col"><div class="day">26</div><div class="month">Jan</div></div>
+        <div class="event-body">
+          <span class="event-tag">National Event</span>
+          <h3>Republic Day Celebration</h3>
+          <p>Grand flag hoisting ceremony with cultural performances, march past, and prize distribution for meritorious students.</p>
+          <div class="event-meta">
+            <span><i class="fas fa-map-marker-alt"></i> School Ground</span>
+            <span><i class="fas fa-users"></i> All Students</span>
+          </div>
+        </div>
+      </div>
+      <div class="event-card">
+        <div class="event-date-col"><div class="day">15</div><div class="month">Aug</div></div>
+        <div class="event-body">
+          <span class="event-tag">National Event</span>
+          <h3>Independence Day Celebration</h3>
+          <p>Patriotic programs, speeches, cultural events, and the grand flag hoisting ceremony with all students and staff.</p>
+          <div class="event-meta">
+            <span><i class="fas fa-map-marker-alt"></i> School Ground</span>
+            <span><i class="fas fa-users"></i> All Students</span>
+          </div>
+        </div>
+      </div>
+      <div class="event-card">
+        <div class="event-date-col"><div class="day">14</div><div class="month">Nov</div></div>
+        <div class="event-body">
+          <span class="event-tag">Cultural</span>
+          <h3>Annual Sports Day & Children's Day</h3>
+          <p>Day-long sports competitions, athletic events, and celebrations honoring the spirit of Pt. Jawaharlal Nehru.</p>
+          <div class="event-meta">
+            <span><i class="fas fa-map-marker-alt"></i> Sports Ground</span>
+            <span><i class="fas fa-users"></i> All Classes</span>
+          </div>
+        </div>
+      </div>
+      <div class="event-card">
+        <div class="event-date-col"><div class="day">22</div><div class="month">Dec</div></div>
+        <div class="event-body">
+          <span class="event-tag">Academic</span>
+          <h3>Annual Prize Distribution & Cultural Night</h3>
+          <p>Grand annual day ceremony felicitating top performers in academics, sports, and co-curricular activities with cultural programs.</p>
+          <div class="event-meta">
+            <span><i class="fas fa-map-marker-alt"></i> School Auditorium</span>
+            <span><i class="fas fa-users"></i> All + Parents</span>
+          </div>
+        </div>
+      </div>
+      <div class="event-card">
+        <div class="event-date-col"><div class="day">05</div><div class="month">Sep</div></div>
+        <div class="event-body">
+          <span class="event-tag">Special</span>
+          <h3>Teachers' Day Celebration</h3>
+          <p>Students honor their teachers with heartfelt programs, performances, and appreciation ceremonies across all classes.</p>
+          <div class="event-meta">
+            <span><i class="fas fa-map-marker-alt"></i> All Classes</span>
+            <span><i class="fas fa-users"></i> Students & Staff</span>
+          </div>
+        </div>
+      </div>
+      <div class="event-card">
+        <div class="event-date-col"><div class="day">Apr</div><div class="month">–May</div></div>
+        <div class="event-body">
+          <span class="event-tag">Academic</span>
+          <h3>Board Exam Preparation Camp</h3>
+          <p>Intensive revision sessions, mock tests, and expert guidance for Class 10 and 12 board examination preparation.</p>
+          <div class="event-meta">
+            <span><i class="fas fa-map-marker-alt"></i> School Campus</span>
+            <span><i class="fas fa-users"></i> Classes 10 & 12</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="proof-btn-wrap reveal">
+      <a href="events-1.html" class="proof-btn green">
+        <i class="fas fa-calendar-check"></i> See Events – Full Calendar
+      </a>
+    </div>
+  </div>
+
+  <!-- ===== COMMUNITY TAB ===== -->
+  <div class="tab-panel" id="tab-community">
+    <div class="panel-header reveal">
+      <div class="panel-label"><i class="fas fa-hands-helping"></i> Social Responsibility</div>
+      <h2 class="panel-title">Community <span>Service</span></h2>
+      <div class="divider"></div>
+      <p class="panel-sub">We believe education extends beyond classrooms. Our students actively serve and uplift the community of Pilibanga.</p>
+    </div>
+
+    <div class="community-banner reveal" style="background:linear-gradient(135deg,var(--blue),var(--blue-light))">
+      <i class="fas fa-globe-asia"></i>
+      <div>
+        <h3>Building Responsible Citizens</h3>
+        <p>Prakash Model School instills social values through active community service programs, environmental drives, and awareness campaigns that benefit the people of Pilibanga and surrounding areas.</p>
+      </div>
+    </div>
+
+    <div class="community-grid stagger">
+      <div class="community-card">
+        <div class="comm-icon"><i class="fas fa-seedling"></i></div>
+        <h3>Tree Plantation Drive</h3>
+        <p>Annual plantation campaign with students planting saplings across Pilibanga town and school grounds to promote green environment.</p>
+        <div class="comm-stat">500+ <span>trees planted</span></div>
+      </div>
+      <div class="community-card">
+        <div class="comm-icon"><i class="fas fa-broom"></i></div>
+        <h3>Swachh Bharat Abhiyan</h3>
+        <p>Regular cleanliness drives in the school neighborhood, local markets, and public spaces under the Swachh Bharat mission.</p>
+        <div class="comm-stat">20+ <span>events held</span></div>
+      </div>
+      <div class="community-card">
+        <div class="comm-icon"><i class="fas fa-tint"></i></div>
+        <h3>Blood Donation Camp</h3>
+        <p>Annual blood donation camp organized with local hospitals where senior students, staff, and parents participate actively.</p>
+        <div class="comm-stat">100+ <span>units donated</span></div>
+      </div>
+      <div class="community-card">
+        <div class="comm-icon"><i class="fas fa-book-open"></i></div>
+        <h3>Adult Literacy Program</h3>
+        <p>Senior students volunteer to teach basic literacy skills to adults in nearby villages under the guidance of teachers.</p>
+        <div class="comm-stat">50+ <span>beneficiaries</span></div>
+      </div>
+      <div class="community-card">
+        <div class="comm-icon"><i class="fas fa-hand-holding-water"></i></div>
+        <h3>Water Conservation Drive</h3>
+        <p>Awareness campaigns on water conservation and rainwater harvesting conducted in schools and surrounding communities.</p>
+        <div class="comm-stat">10+ <span>villages reached</span></div>
+      </div>
+      <div class="community-card">
+        <div class="comm-icon"><i class="fas fa-star-and-crescent"></i></div>
+        <h3>Festival of Unity</h3>
+        <p>Annual cultural programs promoting communal harmony, national integration, and celebration of India's diverse heritage.</p>
+        <div class="comm-stat">5+ <span>festivals celebrated</span></div>
+      </div>
+    </div>
+  </div>
+
+</div><!-- end ach-content -->
+
+
+<!-- ENQUIRE SECTION -->
+<div style="padding:40px 5% 50px;text-align:center;background:#f8fafc">
+  <button onclick="openAdmissionModal()" style="display:inline-flex;align-items:center;justify-content:center;gap:10px;background:linear-gradient(135deg,#F5A623,#e8961a);color:#0B3C5D;padding:16px 44px;border-radius:50px;font-weight:800;font-size:1rem;letter-spacing:.3px;transition:all .25s;box-shadow:0 6px 24px rgba(245,166,35,.5);border:none;cursor:pointer;font-family:'Poppins',sans-serif">
+    <i class="fas fa-file-alt"></i> Enquire for Admission
+  </button>
+</div>
+<!-- FOOTER -->
+<div class="ach-footer">
+  <p>© 2025 Prakash Model School, Pilibanga, Hanumangarh, Rajasthan &nbsp;|&nbsp; <a href="index.html">← Back to Main Site</a></p>
+</div>
+
+
+<!-- ADMISSION MODAL -->
+<div id="adm-modal-overlay">
+  <div id="adm-modal">
+    <div id="adm-modal-header">
+      <button id="adm-modal-close" onclick="closeAdmissionModal()"><i class="fas fa-times"></i></button>
+      <h3><i class="fas fa-graduation-cap" style="margin-right:8px;color:#F5A623"></i>Admission Enquiry 2025-26</h3>
+      <p>Fill in the details - we will contact you shortly.</p>
+    </div>
+    <div id="adm-modal-body">
+      <div id="adm-modal-success">
+        <i class="fas fa-check-circle"></i>
+        <h3 style="color:#276749;margin-bottom:8px">Thank You!</h3>
+        <p style="color:#555;font-size:.88rem">We have received your enquiry. Our team will contact you on WhatsApp or phone shortly.</p>
+        <button onclick="closeAdmissionModal()" style="margin-top:16px;background:#0B3C5D;color:#fff;border:none;border-radius:8px;padding:10px 28px;font-weight:600;cursor:pointer;font-family:inherit">Close</button>
+      </div>
+      <div id="adm-modal-form">
+        <div class="adm-field">
+          <label>Parent Name <span style="color:#e53e3e">*</span></label>
+          <input id="m-parent" type="text" placeholder="Enter Parent Name">
+        </div>
+        <div class="adm-field">
+          <label>Parent Email Address <span style="color:#e53e3e">*</span></label>
+          <input id="m-email" type="email" placeholder="Enter Parent Email Address">
+        </div>
+        <div class="adm-field">
+          <label>Parent Mobile Number <span style="color:#e53e3e">*</span></label>
+          <div class="adm-phone-row">
+            <select id="m-country"><option value="+91">+91 India</option><option value="+1">+1</option><option value="+44">+44</option><option value="+971">+971</option></select>
+            <input id="m-phone" type="tel" placeholder="Enter Mobile Number">
+          </div>
+        </div>
+        <div class="adm-field">
+          <label>Student Name <span style="color:#e53e3e">*</span></label>
+          <input id="m-student" type="text" placeholder="Enter Student Name">
+        </div>
+        <div class="adm-field">
+          <label>Admission Sought in Class <span style="color:#e53e3e">*</span></label>
+          <select id="m-class" onchange="handleModalClassChange(this.value)">
+            <option value="">- Select Class -</option>
+            <option>Pre-Nursery / Nursery</option><option>LKG</option><option>UKG</option>
+            <option>Class 1</option><option>Class 2</option><option>Class 3</option>
+            <option>Class 4</option><option>Class 5</option><option>Class 6</option>
+            <option>Class 7</option><option>Class 8</option><option>Class 9</option>
+            <option>Class 10</option><option value="Class 11">Class 11</option><option value="Class 12">Class 12</option>
+          </select>
+        </div>
+        <div class="adm-field" id="m-stream-box" style="display:none">
+          <label>Stream <span style="color:#e53e3e">*</span></label>
+          <select id="m-stream">
+            <option value="">- Select Stream -</option>
+            <option>Science - Medical (PCB)</option>
+            <option>Science - Non-Medical (PCM)</option>
+            <option>Arts</option><option>Commerce</option><option>Agriculture</option>
+          </select>
+        </div>
+        <div style="display:flex;align-items:flex-start;gap:10px;margin-bottom:16px;margin-top:4px">
+          <input id="m-consent" type="checkbox" style="width:16px;height:16px;margin-top:2px;flex-shrink:0">
+          <label for="m-consent" style="font-size:.78rem;color:#555;cursor:pointer">I agree to receive updates through SMS/Email and WhatsApp</label>
+        </div>
+        <button class="adm-submit" onclick="submitModalAdmission()">
+          <i class="fas fa-paper-plane"></i> Submit Enquiry
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+</body>
+</html>
